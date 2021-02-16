@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<h2>{{msg}}</h2>
+<hr>
+<home/>
+<hr>
+<User/>
+ 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+//1.引入组件
+import Home from './components/Home';
+import User from './components/User';
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    data(){
+        return {
+            msg:"app根组件"
+        };
+    },
+    components:{  //2.挂在组件
+        Home,
+        User
+    }
+
+ 
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+h2{
+    text-align: center;
 }
+
 </style>
